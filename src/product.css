@@ -1,0 +1,15 @@
+.productList{
+  width: 100%;
+}
+
+.productDiv{
+  text-align: center;
+}
+
+.productImg{
+  padding: 5px;
+}
+
+.sale{
+  text-decoration: line-through;
+}
