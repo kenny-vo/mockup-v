@@ -177,21 +177,22 @@ class SingleProduct extends Component {
     // map array in jsx
     const listProducts = productData.map((data) =>
     <div className="col-xs-3 productDiv"
-      data={data}>
+      // normally would put unique key here
+      key={data.name}>
       <img className="productImg" src={data.image.url} alt="product photo"/>
       {/*  conditonal for determining if there is a sale */}
       <p className="productTitle">{data.name}</p>
-      <p>
+
         {(data.price.sale)
           ?
           <p><span className="sale">${data.price.base}</span>
             {' '}
             <span className="saleText">${data.price.sale}</span>
           </p>
-          : <span>${data.price.base}</span>
+          :
+          <p>${data.price.base}</p>
         }
-      </p>
-      <p>
+
         {(data.options) ?
         <a href={data.link}>
           <p className="optionsText">
@@ -203,7 +204,6 @@ class SingleProduct extends Component {
           <button className="storeButton"> Add to Cart</button>
         </a>
         }
-      </p>
     </div>);
 
     return (
