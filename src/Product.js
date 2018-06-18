@@ -176,7 +176,7 @@ class SingleProduct extends Component {
 
     // map array in jsx
     const listProducts = productData.map((data) =>
-    <div className="col-xs-3 productDiv"
+    <div className="col-lg-3 col-md-3 col-sm-6 col-xs-12 productDiv"
       // normally would put unique key here
       key={data.name}>
       <img className="productImg" src={data.image.url} alt="product photo"/>
