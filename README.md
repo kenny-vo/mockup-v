@@ -1,3 +1,3 @@
-##Mockup
+## Mockup
 
-Run NPM run then NPM build to start locally 
+Run NPM run then NPM build to start locally
