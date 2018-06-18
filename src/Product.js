@@ -182,7 +182,6 @@ class SingleProduct extends Component {
       <img className="productImg" src={data.image.url} alt="product"/>
       {/*  conditonal for determining if there is a sale */}
       <p className="productTitle">{data.name}</p>
-
         {(data.price.sale)
           ?
           <p><span className="sale">${data.price.base}</span>
@@ -192,7 +191,7 @@ class SingleProduct extends Component {
           :
           <p>${data.price.base}</p>
         }
-
+        {/* Determining if there are options available, if so link to site/options */}
         {(data.options) ?
         <a href={data.link}>
           <p className="optionsText">
