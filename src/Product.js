@@ -179,7 +179,7 @@ class SingleProduct extends Component {
     <div className="col-lg-3 col-md-3 col-sm-6 col-xs-12 productDiv"
       // normally would put unique key here
       key={data.name}>
-      <img className="productImg" src={data.image.url} alt="product photo"/>
+      <img className="productImg" src={data.image.url} alt="product"/>
       {/*  conditonal for determining if there is a sale */}
       <p className="productTitle">{data.name}</p>
 
