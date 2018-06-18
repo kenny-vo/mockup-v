@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './product.css';
+import './Product.css';
 
 // Array of products
 const productData = [
@@ -173,21 +173,39 @@ const productData = [
 
 class SingleProduct extends Component {
   render(){
+
     // map array in jsx
     const listProducts = productData.map((data) =>
     <div className="col-xs-3 productDiv"
       data={data}>
       <img className="productImg" src={data.image.url} alt="product photo"/>
+      {/*  conditonal for determining if there is a sale */}
+      <p className="productTitle">{data.name}</p>
       <p>
         {(data.price.sale)
-          ? <p><span className="sale">${data.price.base}</span> ${data.price.sale}</p>
-          : `$${data.price.base}`
+          ?
+          <p><span className="sale">${data.price.base}</span>
+            {' '}
+            <span className="saleText">${data.price.sale}</span>
+          </p>
+          : <span>${data.price.base}</span>
         }
       </p>
       <p>
-        {data.name}
+        {(data.options) ?
+        <a href={data.link}>
+          <p className="optionsText">
+            More Options Available
+          </p>
+          <button className="storeButton"> See Details</button>
+        </a> :
+        <a href={data.link}>
+          <button className="storeButton"> Add to Cart</button>
+        </a>
+        }
       </p>
     </div>);
+
     return (
       <div>
         {listProducts}
