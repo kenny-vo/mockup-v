@@ -1,3 +1,3 @@
 ## Mockup
 
-Run NPM run then NPM build to start locally
+Run NPM install then NPM start to start locally
